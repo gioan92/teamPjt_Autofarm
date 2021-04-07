@@ -10,19 +10,19 @@
 
 
 
-2) pip install django
+3) pip install django
 
 
 
-3) pip install mysqlclient
+4) pip install mysqlclient
 
 
 
-4) python manage.py startapp [appname]
+5) python manage.py startapp [appname]
 
 
 
-5) App 설정 변경
+6) App 설정 변경
 
 * App하위에 templates 디렉토리 생성
 
