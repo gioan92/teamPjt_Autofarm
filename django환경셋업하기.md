@@ -6,7 +6,7 @@
 
 
 
-<u>**2) interpreter setting anaconda로 변경**</u>
+<u>**2. interpreter setting anaconda로 변경**</u>
 
 
 
