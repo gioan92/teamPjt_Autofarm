@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Farm</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+<body>
+    <div class="banner">
+        <div class="banner-user flex flex-justify-content-flex-end">
+            <nav class="menu-box-1 flex flex-align-items-center">
+                <a href="{% url 'login' %}">로그인</a>
+                <a href="{% url 'register' %}">회원가입</a>
+            </nav>
+        </div>
+        <div class="banner-menu flex">
+            <div class="banner-icon">
+                <a href="{% url 'base' %}">Auto Farm</a>
+            </div>
+            <div class="banner-navi flex flex-grow-1 flex-justify-content-flex-end">
+                <nav class="menu-box-2 flex flex-align-items-center">
+                    <ul class="flex">
+                        <li>
+                            <a>소개</a>
+                        </li>
+                        <li>
+                            <a>샵</a>
+                        </li>
+                        <li>
+                            <a>재배법</a>
+                        </li>
+                        <li>
+                            <a>그래프</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="contents">
+        <h1>AUTOFARM 초기화면 입니다.</h1>
+
+        {% if section != None %}
+            {% include section %}
+        {% else %}
+            {% include "**/**.html" %}
+        {% endif %}
+    </div>
+
+
+
+
+
+</body>
+</html>

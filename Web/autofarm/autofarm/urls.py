@@ -19,5 +19,5 @@ from django.urls import path
 from autofarm import views
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.base, name='base'),
 ]
