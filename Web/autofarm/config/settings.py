@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'autofarm',
     'graph',
     'shop',
-    'cultivate'
+    'cultivate',
+    'loginregister'
 ]
 
 MIDDLEWARE = [
