@@ -41,13 +41,17 @@
         </div>
     </div>
     <div class="contents">
-        <h1>AUTOFARM 초기화면 입니다.</h1>
 
         {% if section != None %}
             {% include section %}
         {% else %}
-            {% include "**/**.html" %}
         {% endif %}
+
+
+        {% block content %}
+
+        {% endblock %}
+
     </div>
 
 
