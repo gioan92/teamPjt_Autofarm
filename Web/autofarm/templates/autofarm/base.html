@@ -44,8 +44,23 @@
     <div class="banner">
         <div class="banner-user flex flex-justify-content-flex-end">
             <nav class="menu-box-1 flex flex-align-items-center">
-                <a href="{% url 'login' %}">로그인</a>
-                <a href="{% url 'register' %}">회원가입</a>
+                 {% if 'u_id' in request.session %}
+                    {% if request.session.u_id %}
+                        <li>
+                            <a>{{request.session.u_id}}님, 환영합니다</a>
+                            <a href="{% url 'logout' %}">로그아웃</a>
+                        </li>
+                    {% else %}
+                         <li>
+                             <a href="{% url 'login' %}">로그인</a>
+                             <a href="{% url 'register' %}">회원가입</a>
+                        </li>
+                    {% endif %}
+                {% else %}
+                    <a href="{% url 'login' %}">로그인</a>
+                    <a href="{% url 'register' %}">회원가입</a>
+                {% endif %}
+
             </nav>
         </div>
         <div class="banner-menu flex">
@@ -55,17 +70,18 @@
             <div class="banner-navi flex flex-grow-1 flex-justify-content-flex-end">
                 <nav class="menu-box-2 flex flex-align-items-center">
                     <ul class="flex">
+
                         <li>
-                            <a>소개</a>
+                            <a href="{% url 'login' %}">소개</a>
                         </li>
                         <li>
-                            <a>샵</a>
+                            <a href="{% url 'shop' %}">샵</a>
                         </li>
                         <li>
-                            <a>재배법</a>
+                            <a href="{% url 'cultivate' %}">재배법</a>
                         </li>
                         <li>
-                            <a>그래프</a>
+                            <a href="{% url 'graph' %}">그래프</a>
                         </li>
                     </ul>
                 </nav>

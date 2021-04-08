@@ -1,0 +1,71 @@
+{% extends "autofarm/base.html" %}
+
+{% load static %}
+{% block content %}
+
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- ======= Agent Single ======= -->
+    <section class="agent-single">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="agent-avatar-box">
+                  <img style="width:500px; height:400px;" src="static/image/{{item.i_img}}.jpg" alt="" class="agent-avatar img-fluid">
+                </div>
+              </div>
+              <div class="col-md-5 section-md-t3">
+                <div class="agent-info-box">
+                  <div class="agent-title">
+                    <div class="title-box-d">
+                      <h3 class="title-d">{{item.i_name}}
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="agent-content mb-3">
+                    <p class="content-d color-text-a">
+                      {{item.i_desc}}
+                    </p>
+                    <div class="info-agents color-a">
+                      <p>
+                        <strong>가격: </strong>
+                        <span class="color-text-a"> {{item.i_price}}원</span>
+                      </p>
+                      <p>
+                        <strong>수량: </strong>
+                        <span class="color-text-a"> {{item.i_stock}}개</span>
+                      </p>
+
+
+                    </div>
+                  </div>
+                  <div style="margin:30px 0px 0px -25px;" class="col-md-12">
+                      <button type="submit" class="btn btn-b">구매하기</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Agent Single -->
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+{% endblock %}

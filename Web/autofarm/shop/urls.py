@@ -20,4 +20,5 @@ from shop import views
 
 urlpatterns = [
     path('shop', views.shop, name='shop'),
+    path('shop_detail', views.shop_detail, name='shop_detail'),
 ]

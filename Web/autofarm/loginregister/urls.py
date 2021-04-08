@@ -21,4 +21,7 @@ from loginregister import views
 urlpatterns = [
     path('login', views.login, name='login'),
     path('register', views.register, name='register'),
+    path('registerimpl', views.registerimpl, name='registerimpl'),
+    path('logout', views.logout, name='logout'),
+    path('loginimpl', views.loginimpl, name='loginimpl'),
 ]
