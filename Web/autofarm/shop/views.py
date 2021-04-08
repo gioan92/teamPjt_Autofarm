@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from frame.shop.db import ShopDb
+
 # Create your views here.
 def shop(request):
     shoplist = ShopDb().selectall()
@@ -7,8 +8,6 @@ def shop(request):
         'shoplist': shoplist
     }
     return render(request, 'shop/shop.html', context);
-
-
 
 def shop_detail(request):
     i_id = request.GET['i_id']

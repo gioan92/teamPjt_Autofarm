@@ -20,4 +20,5 @@ from graph import views
 
 urlpatterns = [
     path('graph', views.graph, name='graph'),
+    path('graph1', views.graph1, name='graph1'),
 ]
