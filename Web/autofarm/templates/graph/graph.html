@@ -75,31 +75,30 @@
             <button>show</button>
         </div>
     </div>
-    <div id="container"></div>
-    <p class="highcharts-description">
-        Graph 화면 입니다.
-        온도, CO2, 습도 등이 표시됩니다.
-    </p>
+    <div id="container1"></div>
+    <p class="highcharts-description">CO2 그래프</p>
+    <div id="container2"></div>
+    <p class="highcharts-description">온습도 그래프</p>
 </figure>
 
 <script>
-    function graph1(data) {
-        Highcharts.chart('container', {
+    function graph_CO2(data) {
+        Highcharts.chart('container1', {
             chart: {
-                type: 'line'
+                zoomType: 'xy'
             },
             title: {
-                text: 'Monthly Average Temperature'
+                text: 'CO2 ppm'
             },
             subtitle: {
-                text: 'Source: WorldClimate.com'
+                text: '하우스 CO2 농도'
             },
             xAxis: {
                 categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
             },
             yAxis: {
                 title: {
-                    text: 'Temperature (°C)'
+                    text: 'CO2'
                 }
             },
             plotOptions: {
@@ -107,24 +106,97 @@
                     dataLabels: {
                         enabled: true
                     },
-                    enableMouseTracking: false
+                    enableMouseTracking: true
                 }
             },
             series: data.datas
         });
     };
 
-    function getdata1(){
+    function get_CO2_data() {
         $.ajax({
-            url:'{% url "graph1" %}',
+            url:'{% url "graph_CO2" %}',
             success:function(data){
-                graph1(data);
+                graph_CO2(data);
             }
         });
     };
 
     $(function() {
-        getdata1();
+        get_CO2_data();
+    });
+</script>
+<script>
+    function graph_temphum(data) {
+        Highcharts.chart('container2', {
+            chart: {
+                zoomType: 'xy'
+            },
+            title: {
+                text: 'Temperature and Humidity'
+            },
+            subtitle: {
+                text: '하우스 온습도'
+            },
+            xAxis: [{
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                crosshair: true
+            }],
+            yAxis: [{ // Primary yAxis
+                labels: {
+                    format: '{value}°C',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                },
+                title: {
+                    text: 'Temperature',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                }
+            }, { // Secondary yAxis
+                title: {
+                    text: 'Humidity',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                labels: {
+                    format: '{value} %',
+                    style: {
+                        color: Highcharts.getOptions().colors[0]
+                    }
+                },
+                opposite: true
+            }],
+            tooltip: {
+                shared: true
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 120,
+                verticalAlign: 'top',
+                y: 100,
+                floating: true,
+                backgroundColor:
+                    Highcharts.defaultOptions.legend.backgroundColor || // theme
+                    'rgba(255,255,255,0.25)'
+            },
+            series: data.datas
+        });
+    };
+    function get_temphum_data() {
+        $.ajax({
+            url:'{% url "graph_temphum" %}',
+            success:function(data){
+                graph_temphum(data);
+            }
+        });
+    };
+    $(function() {
+        get_temphum_data();
     });
 </script>
 <script>
