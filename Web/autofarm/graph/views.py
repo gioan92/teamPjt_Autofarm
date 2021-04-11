@@ -2,26 +2,39 @@ from django.http import JsonResponse
 from django.shortcuts import render
 
 # Create your views here.
+from frame.graph.db import *
+
+
 def graph(request):
     return render(request, 'graph/graph.html');
 
 def graph_CO2(request):
+    co2_data = CO2Db().selectall();
+    categories = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17',
+                  '18', '19', '20', '21', '22', '23'];
     datas = [{
         'name': 'CO2',
         'type': 'line',
-        'data': [1320, 1300, 1275, 1240, 1200, 1163, 1155, 1189, 1230, 1257, 1288, 1311]
+        'data': []
     }];
+    for _ in range(-1, -25, -1):
+        datas[0]['data'].insert(0, co2_data.pop().co2);
     context = {
+        'categories':categories,
         'datas':datas,
     };
     return JsonResponse(context);
 
 def graph_temphum(request):
+    temperature_data = TemperatureDb().selectall();
+    humidity_data = HumidityDb().selectall();
+    categories = ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16',
+                  '17', '18', '19', '20', '21', '22', '23'];
     datas = [{
         'name': 'humidity',
         'type': 'line',
         'yAxis': 1,
-        'data': [49.9, 71.5, 80.4, 88.2, 86.0, 76.0, 64.6, 68.5, 67.4, 70.1, 72.6, 74.4],
+        'data': [],
         'tooltip': {
             'valueSuffix': ' %'
         }
@@ -29,12 +42,16 @@ def graph_temphum(request):
     }, {
         'name': 'Temperature',
         'type': 'line',
-        'data': [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+        'data': [],
         'tooltip': {
             'valueSuffix': '°C'
         }
     }];
+    for _ in range(-1, -25, -1):
+        datas[0]['data'].insert(0, humidity_data.pop().hum);
+        datas[1]['data'].insert(0, temperature_data.pop().tem);
     context = {
+        'categories':categories,
         'datas':datas,
     };
     return JsonResponse(context);
