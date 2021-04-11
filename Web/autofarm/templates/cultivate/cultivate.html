@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h1>cultivate 화면 입니다.</h1>
-</body>
-</html>
+{% extends "autofarm/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<h1>cultivate 화면 입니다.</h1>
+
+<link href="http://api.nongsaro.go.kr/css/api.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://api.nongsaro.go.kr/js/framework.js"></script>
+<script type="text/javascript" src="http://api.nongsaro.go.kr/js/openapi_nongsaro.js"></script>
+
+<script type="text/javascript">
+    nongsaroOpenApiRequest.apiKey = "202104094SXXKRREJSI2OJ7FYWHHAG";
+    nongsaroOpenApiRequest.serviceName = "farmWorkingPlan";
+    nongsaroOpenApiRequest.operationName = "mainCategoryList";
+    nongsaroOpenApiRequest.htmlArea = "nongsaroApiLoadingArea";
+    nongsaroOpenApiRequest.callback = "http://127.0.0.1/cultivate/ajax_local_callback.jsp";
+</script>
+
+<div id="nongsaroApiLoadingArea"></div>
+<div id="nongsaroApiLoadingArea1"></div>
+<div id="nongsaroApiLoadingArea3"></div>
+<div id="nongsaroApiLoadingArea4"></div>
+<div id="nongsaroApiLoadingArea5"></div>
+
+{% endblock %}
+

@@ -94,7 +94,10 @@
                 text: '하우스 CO2 농도'
             },
             xAxis: {
-                categories: data.categories
+                categories: data.categories,
+                scrollbar: {
+                    enabled: true
+                }
             },
             yAxis: {
                 title: {
@@ -140,7 +143,10 @@
             },
             xAxis: [{
                 categories: data.categories,
-                crosshair: true
+                crosshair: true,
+                scrollbar: {
+                    enabled: true
+                }
             }],
             yAxis: [{ // Primary yAxis
                 labels: {
