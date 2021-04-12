@@ -52,10 +52,10 @@
     </LinearLayout>
 
     <FrameLayout
-        android:layout_margin="10dp"
         android:id="@+id/farm_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
 
     </FrameLayout>
 
