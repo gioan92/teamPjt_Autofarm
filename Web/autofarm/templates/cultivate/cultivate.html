@@ -5,23 +5,26 @@
 
 <h1>cultivate 화면 입니다.</h1>
 
+<head>
 <link href="http://api.nongsaro.go.kr/css/api.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="http://api.nongsaro.go.kr/js/framework.js"></script>
 <script type="text/javascript" src="http://api.nongsaro.go.kr/js/openapi_nongsaro.js"></script>
 
 <script type="text/javascript">
-    nongsaroOpenApiRequest.apiKey = "202104094SXXKRREJSI2OJ7FYWHHAG";
+    nongsaroOpenApiRequest.apiKey = "20210412QDMYK4X7IK12CADILP0W";
     nongsaroOpenApiRequest.serviceName = "farmWorkingPlan";
     nongsaroOpenApiRequest.operationName = "mainCategoryList";
     nongsaroOpenApiRequest.htmlArea = "nongsaroApiLoadingArea";
-    nongsaroOpenApiRequest.callback = "http://127.0.0.1/cultivate/ajax_local_callback.jsp";
+    nongsaroOpenApiRequest.callback = "http://127.0.0.1/ajax_local_callback.jsp";
 </script>
+</head>
 
+<body>
 <div id="nongsaroApiLoadingArea"></div>
 <div id="nongsaroApiLoadingArea1"></div>
 <div id="nongsaroApiLoadingArea3"></div>
 <div id="nongsaroApiLoadingArea4"></div>
 <div id="nongsaroApiLoadingArea5"></div>
-
+</body>
 {% endblock %}
 
