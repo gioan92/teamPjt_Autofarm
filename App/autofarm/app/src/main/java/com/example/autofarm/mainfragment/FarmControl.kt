@@ -12,6 +12,7 @@ import com.example.autofarm.MainActivity
 import com.example.autofarm.R
 import com.example.autofarm.mainfragment.control.CeilActivity
 import com.example.autofarm.mainfragment.control.DegreeActivity
+import com.example.autofarm.mainfragment.control.LightActivity
 import com.example.autofarm.mainfragment.control.WaterActivity
 import kotlinx.android.synthetic.main.farmcontrol.*
 
@@ -30,9 +31,13 @@ class FarmControl() : Fragment() {
         }
         waterbutton.setOnClickListener {
             val waterIntent = Intent(activity, WaterActivity::class.java).apply {
-
             };
             startActivity(waterIntent);
+        }
+        lightcontrolbutton.setOnClickListener {
+            val lightIntent = Intent(activity, LightActivity::class.java).apply {
+            };
+            startActivity(lightIntent);
         }
         ceilingcontrolbutton.setOnClickListener {
             val ceilIntent = Intent(activity, CeilActivity::class.java).apply {
