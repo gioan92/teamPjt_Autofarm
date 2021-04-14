@@ -14,6 +14,8 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="AutofarmTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimaryVariant">#808000</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="colorPrimary">#808000</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
