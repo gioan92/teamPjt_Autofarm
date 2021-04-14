@@ -6,14 +6,7 @@ import android.os.PersistableBundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-<<<<<<< Updated upstream
-import androidx.appcompat.app.AppCompatActivity
-=======
-import android.widget.Button
-import androidx.core.content.ContextCompat.startActivity
->>>>>>> Stashed changes
 import androidx.fragment.app.Fragment
-import com.example.autofarm.MainActivity
 import com.example.autofarm.R
 import com.example.autofarm.mainfragment.control.CeilActivity
 import com.example.autofarm.mainfragment.control.DegreeActivity
@@ -26,7 +19,6 @@ class FarmControl() : Fragment() {
         val view = inflater.inflate(R.layout.farmcontrol, container, false);
         return view;
     }
-<<<<<<< Updated upstream
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -53,6 +45,3 @@ class FarmControl() : Fragment() {
     }
 
 }
-=======
-}
->>>>>>> Stashed changes

@@ -7,6 +7,6 @@ import com.example.autofarm.R
 class CeilActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.ceilopen);
+        setContentView(R.layout.ceilcontrol);
     }
 }

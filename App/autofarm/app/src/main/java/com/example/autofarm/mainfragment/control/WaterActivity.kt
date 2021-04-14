@@ -7,6 +7,6 @@ import com.example.autofarm.R
 class WaterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.water);
+        setContentView(R.layout.watercontrol);
     }
 }

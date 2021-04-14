@@ -32,19 +32,21 @@
             >
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/degree_up"
                 android:layout_width="188dp"
                 android:layout_height="130dp"
                 android:layout_margin="10dp"
                 android:scaleType="fitXY"
+                android:background="#E3EFD5"
                 app:srcCompat="@drawable/arrowup" />
 
-            <Button
-                android:id="@+id/degreeup"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="up" />
+                android:layout_margin="5dp"
+                android:text="up"
+                android:gravity="center"
+                android:textSize="40dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -55,19 +57,21 @@
             >
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/degree_down"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_margin="10dp"
                 android:scaleType="fitXY"
+                android:background="#E3EFD5"
                 app:srcCompat="@drawable/arrowdown"/>
 
-            <Button
-                android:id="@+id/degreedown"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="down" />
+                android:layout_margin="5dp"
+                android:text="down"
+                android:gravity="center"
+                android:textSize="40dp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
