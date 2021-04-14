@@ -66,10 +66,11 @@
 
             <ImageButton
                 android:id="@+id/upbutton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/arrowkeyup"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/arrowup"
                 android:layout_gravity="center"
+                android:scaleType="fitXY"
                 />
 
             <LinearLayout
@@ -79,24 +80,31 @@
 
                 <ImageButton
                     android:id="@+id/leftbutton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/arrowkeyleft" />
+                    app:srcCompat="@drawable/arrowleft"
+                    android:scaleType="fitXY"
+                    />
 
                 <ImageButton
                     android:id="@+id/downbutton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/arrowkeydown" />
+                    app:srcCompat="@drawable/arrowdown"
+                    android:scaleType="fitXY"
+                    />
+
 
                 <ImageButton
                     android:id="@+id/rightbutton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/arrowkeyright" />
+                    app:srcCompat="@drawable/arrowright"
+                    android:scaleType="fitXY"
+                    />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
