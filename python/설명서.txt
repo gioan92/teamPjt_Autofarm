@@ -1,0 +1,15 @@
+AutoFarmVideoStreamingServer.py 
+라즈베리 파이로 보내주세요
+
+video2.html 을 라즈베리 파이에 send 한 다음
+AutoFarmVideoStreamingServer.py 파일이 들어있는 폴더에 templates 폴더를 만든 다음 넣어주세요.
+
+AutoFarmVideoStreamingServer.py  실행
+
+웹에서 
+http://192.168.0.188:5000/showVideo
+로 확인
+
+앱에서도 확인 
+
+* 자신의 라즈베리 파이 IP 주소로 바꿔주세요.
