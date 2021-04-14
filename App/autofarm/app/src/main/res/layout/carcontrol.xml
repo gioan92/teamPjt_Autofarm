@@ -69,8 +69,8 @@
 
             <ImageButton
                 android:id="@+id/upbutton"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 app:srcCompat="@drawable/arrowup"
                 android:layout_gravity="center"
                 android:scaleType="fitXY"
@@ -78,23 +78,24 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
 
                 <ImageButton
                     android:id="@+id/leftbutton"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     app:srcCompat="@drawable/arrowleft"
                     android:scaleType="fitXY"
                     />
 
                 <ImageButton
                     android:id="@+id/downbutton"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     app:srcCompat="@drawable/arrowdown"
                     android:scaleType="fitXY"
                     />
@@ -102,9 +103,8 @@
 
                 <ImageButton
                     android:id="@+id/rightbutton"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     app:srcCompat="@drawable/arrowright"
                     android:scaleType="fitXY"
                     />
