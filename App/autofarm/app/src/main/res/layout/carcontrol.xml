@@ -68,7 +68,7 @@
                 android:id="@+id/upbutton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_launcher_foreground"
+                app:srcCompat="@drawable/arrowkeyup"
                 android:layout_gravity="center"
                 />
 
@@ -82,21 +82,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    app:srcCompat="@drawable/arrowkeyleft" />
 
                 <ImageButton
                     android:id="@+id/downbutton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    app:srcCompat="@drawable/arrowkeydown" />
 
                 <ImageButton
                     android:id="@+id/rightbutton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    app:srcCompat="@drawable/arrowkeyright" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
