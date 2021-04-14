@@ -1,10 +1,5 @@
 import paho.mqtt.client as mqtt
-from RPi import GPIO
-import time
-
-GPIO.setmode(GPIO.BCM)
-LED = 20
-GPIO.setup(LED, GPIO.OUT, initial=GPIO.LOW)
+from led import Led
 
 
 def on_connect(client,usedata,flags,rc):
@@ -19,16 +14,13 @@ def on_message(client,userdata,msg):
     myval = msg.payload.decode("utf-8")
     print("메세지도착" + str(myval))
     if str(myval) == 'light_up':
-        try:
-            GPIO.output(LED, GPIO.HIGH)
-        except KeyboardInterrupt:
-            pass
+       Led().lighton()
     elif str(myval) == 'light_down':
-        try:
-            GPIO.output(LED, GPIO.LOW)
-        except KeyboardInterrupt:
-            pass
-
+        Led().lightoff()
+    # elif str(myval) == 'ceil_open':
+    #         Servo().ceilopen()
+    # elif str(myval) == 'ceil_close':
+    #         Servo().ceilclose()
 
 
 
@@ -43,5 +35,3 @@ mqttClient.connect("192.168.0.197",1883,60)
 # 토픽이 전달될 때 까지 수신대기기
 mqttClient.loop_forever( )
 
-
-GPIO.cleanup()
