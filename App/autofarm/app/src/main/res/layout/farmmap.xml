@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E3EFD5">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="비닐하우스 지도"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+    <TextView
+        android:id="@+id/mapwarehouse"
+        android:layout_width="76dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangle"
+        android:text="창고"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:scaleType="fitXY"
+        tools:srcCompat="@drawable/rectangle" />
+
+    <TextView
+        android:id="@+id/mapfarm"
+        android:layout_width="76dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rectangle"
+        android:text="농장"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+</LinearLayout>

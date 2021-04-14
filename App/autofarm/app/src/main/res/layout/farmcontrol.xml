@@ -29,7 +29,7 @@
 
             <Button
                 android:id="@+id/degreecontrolbutton"
-                android:layout_width="match_parent"
+                android:layout_width="206dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="온도 조절"/>
@@ -130,5 +130,6 @@
         android:text="농장 지도 확인하기">
 
     </Button>
+
 
 </LinearLayout>
