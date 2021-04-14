@@ -1,11 +1,13 @@
 package com.example.autofarm
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.autofarm.mainfragment.*
+import com.example.autofarm.mainfragment.control.DegreeActivity
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.farm_main.*
@@ -50,4 +52,6 @@ class MainActivity : AppCompatActivity() {
             }
         }.attach();
     }
+
+
 }
