@@ -40,18 +40,21 @@
                 android:id="@+id/definition"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:text="목적지 설정" />
 
             <Button
                 android:id="@+id/carstart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:text="출발" />
 
             <Button
                 android:id="@+id/carreturn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:text="회수" />
 
         </LinearLayout>
