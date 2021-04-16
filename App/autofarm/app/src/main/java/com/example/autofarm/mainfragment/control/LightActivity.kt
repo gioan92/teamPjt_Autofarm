@@ -34,7 +34,7 @@ class LightActivity : AppCompatActivity(), View.OnClickListener{
     }
 
     fun publish(data:String){
-        mqttClient.publish("mydata/led",data)
+        mqttClient.publish("mydata/greenhouse",data)
     }
 
 }

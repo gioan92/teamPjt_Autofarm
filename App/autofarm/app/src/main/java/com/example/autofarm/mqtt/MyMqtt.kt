@@ -11,13 +11,11 @@ class MyMqtt(val context: Context, val uri:String) {
 
     fun connect(topics : Array<String>?=null){
         val mqttconnect_options = MqttConnectOptions()
-
         //connect 호출 - broker에 연결
         mqttClient.connect(mqttconnect_options,null, object:IMqttActionListener{
             override fun onSuccess(asyncActionToken: IMqttToken?) {
                 Log.d("mymqtt","접속성공......")
             }
-
             override fun onFailure(asyncActionToken: IMqttToken?, exception: Throwable?) {
                 Log.d("mymqtt","접속실패......")
             }

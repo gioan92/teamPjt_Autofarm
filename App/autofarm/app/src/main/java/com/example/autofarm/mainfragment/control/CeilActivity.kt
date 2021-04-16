@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.autofarm.R
 import com.example.autofarm.mqtt.MyMqtt
+import kotlinx.android.synthetic.main.ceilcontrol.*
 import kotlinx.android.synthetic.main.lightcontrol.*
 import java.lang.Exception
 
@@ -20,19 +21,19 @@ class CeilActivity : AppCompatActivity(), View.OnClickListener {
         catch (e: Exception){
             e.printStackTrace()
         }
-        light_up.setOnClickListener(this)
-        light_down.setOnClickListener(this)
+        ceil_open.setOnClickListener(this)
+        ceil_close.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
         var data:String = ""
-        if(v?.id==R.id.light_up){
-            data="light_up"
+        if(v?.id==R.id.ceil_open){
+            data="ceil_open"
         }else{
-            data="light_down"
+            data="ceil_close"
         }
         publish(data)
     }
     fun publish(data:String){
-        mqttClient.publish("mydata/servo",data)
+        mqttClient.publish("mydata/greenhouse",data)
     }
 }
