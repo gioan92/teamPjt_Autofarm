@@ -31,7 +31,7 @@ class MyMqtt(val context: Context, val uri:String) {
         message.qos = qos
         mqttClient.publish(topic,message,null,object:IMqttActionListener{
             override fun onSuccess(asyncActionToken: IMqttToken?) {
-                Log.d("mymqtt","publish성공")
+                Log.d("mymqtt","publish성공");
             }
 
             override fun onFailure(asyncActionToken: IMqttToken?, exception: Throwable?) {
