@@ -25,7 +25,7 @@ SECRET_KEY = 'mp6br#c2^7xkkj))z46#1cv9gzklu#gj0)gqq!gi*43$e!*xog'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'graph',
     'shop',
     'cultivate',
-    'loginregister'
+    'loginregister',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +73,16 @@ TEMPLATES = [
         },
     },
 ]
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
 
 WSGI_APPLICATION = 'config.wsgi.application'
 

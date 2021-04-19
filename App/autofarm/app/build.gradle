@@ -49,6 +49,8 @@ dependencies {
     implementation 'org.mariadb.jdbc:mariadb-java-client:2.4.1'
 
 
+    //http 통신 위한 implementation
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 
 
     testImplementation 'junit:junit:4.+'

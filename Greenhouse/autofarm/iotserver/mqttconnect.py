@@ -11,7 +11,6 @@ def on_connect(client,usedata,flags,rc):
     print("connect.."+str(rc))
     if rc == 0:
         client.subscribe("mydata/greenhouse") # mydata/led - 토픽명
-
     else:
         print("연결실패")
 

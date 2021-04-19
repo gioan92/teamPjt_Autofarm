@@ -34,7 +34,7 @@
                 android:text="id" />
 
             <EditText
-                android:id="@+id/use_pwd"
+                android:id="@+id/user_pwd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
