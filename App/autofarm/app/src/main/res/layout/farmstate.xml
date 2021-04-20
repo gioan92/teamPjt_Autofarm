@@ -20,7 +20,8 @@
                 android:id="@+id/weathertext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="날씨 정보" />
+                android:text="날씨 정보"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
 
             <ImageView
@@ -48,18 +49,25 @@
                 android:layout_weight="1"
                 >
 
-                <TextView
+                <Button
                     android:id="@+id/degreetext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="온도" />
+                    android:text="온도"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-
-                <ImageView
-                    android:id="@+id/degreeimage"
+                <TextView
+                    android:id="@+id/degree"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    android:text="온도"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    />
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -73,14 +81,19 @@
                     android:id="@+id/humiditytext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="습도" />
+                    android:text="습도"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-
-                <ImageView
-                    android:id="@+id/humidityimage"
+                <TextView
+                    android:id="@+id/humidity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    android:text="습도"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    />
 
 
             </LinearLayout>
@@ -95,14 +108,20 @@
                     android:id="@+id/co2text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="이산화탄소" />
+                    android:text="이산화탄소"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-
-                <ImageView
-                    android:id="@+id/co2image"
+                <TextView
+                    android:id="@+id/co2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    android:text="CO2 농도"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"
+
+                    />
 
 
             </LinearLayout>
