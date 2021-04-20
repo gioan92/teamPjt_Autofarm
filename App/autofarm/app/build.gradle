@@ -51,6 +51,7 @@ dependencies {
 
     //http 통신 위한 implementation
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
 
 
     testImplementation 'junit:junit:4.+'

@@ -93,10 +93,10 @@
                     />
 
                 <ImageButton
-                    android:id="@+id/downbutton"
+                    android:id="@+id/downstop"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    app:srcCompat="@drawable/arrowdown"
+                    app:srcCompat="@drawable/arrowstop"
                     android:scaleType="fitXY"
                     />
 
@@ -109,6 +109,15 @@
                     android:scaleType="fitXY"
                     />
             </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/downbutton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/arrowdown"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

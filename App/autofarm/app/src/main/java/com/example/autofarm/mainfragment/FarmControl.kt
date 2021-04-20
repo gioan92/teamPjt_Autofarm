@@ -8,10 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.autofarm.R
-import com.example.autofarm.mainfragment.control.CeilActivity
-import com.example.autofarm.mainfragment.control.DegreeActivity
-import com.example.autofarm.mainfragment.control.LightActivity
-import com.example.autofarm.mainfragment.control.WaterActivity
+import com.example.autofarm.mainfragment.control.*
 import kotlinx.android.synthetic.main.farmcontrol.*
 
 class FarmControl() : Fragment() {
@@ -41,6 +38,11 @@ class FarmControl() : Fragment() {
             val ceilIntent = Intent(activity, CeilActivity::class.java).apply {
             };
             startActivity(ceilIntent);
+        }
+        farmmapbutton.setOnClickListener {
+            val mapIntent = Intent(activity, MapActivity::class.java).apply {
+            }
+            startActivity(mapIntent);
         }
     }
 

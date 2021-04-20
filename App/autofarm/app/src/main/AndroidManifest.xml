@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AutofarmTheme">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <activity android:name=".MainActivity" />
         <service android:name="org.eclipse.paho.android.service.MqttService" />
         <service android:name="org.eclipse.paho.android.service.MqttService" />
@@ -28,6 +29,13 @@
 
         <service android:name="org.eclipse.paho.android.service.MqttService" />
         <service android:name="org.eclipse.paho.android.service.MqttService" />
+=======
+        <activity android:name=".mainfragment.control.MapActivity"></activity>
+        <activity android:name=".login.LoginActivity" />
+
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+>>>>>>> Stashed changes
 
         <activity android:name=".mainfragment.control.CeilActivity" />
         <activity android:name=".mainfragment.control.LightActivity" />

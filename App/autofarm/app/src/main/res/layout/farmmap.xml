@@ -11,44 +11,143 @@
         android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="비닐하우스 지도"
+        android:text="Farm Map"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
 
     <TextView
         android:id="@+id/mapwarehouse"
-        android:layout_width="76dp"
-        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/rectangle"
         android:text="창고"
         android:gravity="center"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/warehouse"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/visibleTestBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="visible test" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/tractor1_warehouse"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/tractor1"
+                android:visibility="invisible"/>
+            <ImageView
+                android:id="@+id/tractor2_warehouse"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/tractor2" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/arrowcurvedown" />
+                <ImageView
+                    android:id="@+id/tractor1_wtof"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/tractor1" />
+                <ImageView
+                    android:id="@+id/tractor2_wtof"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/tractor2" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+                <ImageView
+                    android:id="@+id/tractor1_ftow"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/tractor1" />
+                <ImageView
+                    android:id="@+id/tractor2_ftow"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/tractor2" />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/arrowcurveup" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/tractor1_farm"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/tractor1" />
+            <ImageView
+                android:id="@+id/tractor2_farm"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/tractor2" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:scaleType="fitXY"
-        tools:srcCompat="@drawable/rectangle" />
-
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/farm"
+        android:layout_gravity="center" />
     <TextView
         android:id="@+id/mapfarm"
         android:layout_width="76dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/rectangle"
         android:text="농장"
         android:gravity="center"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
 </LinearLayout>
