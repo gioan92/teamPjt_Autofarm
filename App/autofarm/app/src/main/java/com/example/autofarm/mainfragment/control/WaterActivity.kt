@@ -13,7 +13,7 @@ class WaterActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.watercontrol);
 
-        mqttClient = MyMqtt(this, "tcp://192.168.0.199:1883");
+        mqttClient = MyMqtt(this, "tcp://192.168.0.197:1883");
 
         try {
             mqttClient.connect(arrayOf<String>("mydata/greenhouse"));

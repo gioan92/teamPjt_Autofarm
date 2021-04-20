@@ -12,7 +12,6 @@ led = 21
 
 class MyMqtt_Sub():
     def __init__(self):
-      
         client = mqtt.Client()
         client.on_connect = self.on_connect
         client.on_message = self.on_message
@@ -30,8 +29,8 @@ class MyMqtt_Sub():
             print("연결실패")
 
     def on_message(self,client, userdata, msg):
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setup(led, GPIO.OUT, initial=GPIO.LOW)
+        # GPIO.setmode(GPIO.BCM)
+        # GPIO.setup(led, GPIO.OUT, initial=GPIO.LOW)
         myval = msg.payload.decode("utf-8")
         print(myval)
         print(msg.topic + "----" + str(myval))
