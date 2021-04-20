@@ -25,15 +25,9 @@ import java.net.URL
 import kotlin.concurrent.thread
 import kotlin.math.log
 
-
-
-
 class FarmCondition : Fragment() {
-
     var dhtdata:String? = null
-
     lateinit var handler1: Handler
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.farmstate, container, false);
@@ -49,12 +43,8 @@ class FarmCondition : Fragment() {
                 when(msg.what){
                     0 -> degree.text = msg.arg1.toString()
                 }
-
-
             }
         }
-
-
         val parent = activity as MainActivity
         dhtdata = parent.senddata()
 
@@ -66,7 +56,7 @@ class FarmCondition : Fragment() {
 
     fun useMessageHandler(view: View){
         var parent = activity as MainActivity
-        parent.test101.setText("adf")
+        //parent.test101.setText("adf")
         var dhtdata = (activity as MainActivity).senddata()
 
         Log.d("mymqtt", "transport dhtdata")

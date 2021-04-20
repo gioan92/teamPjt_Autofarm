@@ -22,16 +22,12 @@ import java.lang.Exception
 import java.util.*
 import kotlin.collections.ArrayList
 
-
 class Examples {
     companion object {
         var data:String? = ""
     }
 
 }
-
-
-
 
 class MainActivity : AppCompatActivity() {
     //Fragment를 불러오기 위한 변수
@@ -40,13 +36,8 @@ class MainActivity : AppCompatActivity() {
     var frag_control = FarmControl();
     var fragmentlist = ArrayList<Fragment>();
 
-
-
-
     lateinit var mqttClient:MyMqtt
     var data:String =  ""
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
