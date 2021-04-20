@@ -13,14 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AutofarmTheme">
-        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".MainActivity" />
         <service android:name="org.eclipse.paho.android.service.MqttService" />
         <service android:name="org.eclipse.paho.android.service.MqttService" />
         <activity android:name=".mainfragment.control.CeilActivity"/>
         <activity android:name=".mainfragment.control.LightActivity"/>
         <activity android:name=".mainfragment.control.WaterActivity"/>
         <activity android:name=".mainfragment.control.DegreeActivity"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

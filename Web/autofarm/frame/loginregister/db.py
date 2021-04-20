@@ -9,7 +9,7 @@ class UserDb(Db):
             conn = super().getConnection();
             print(conn)
             cursor = conn.cursor();
-            cursor.execute(Sql.userinsert % (u_id,u_name,u_pwd,u_contact,u_addr));
+            cursor.execute(Sql.userinsert % (u_id,u_pwd,u_name,u_contact,u_addr));
             conn.commit();
         except Exception as e:
             conn.rollback();

@@ -24,4 +24,5 @@ urlpatterns = [
     path('registerimpl', views.registerimpl, name='registerimpl'),
     path('logout', views.logout, name='logout'),
     path('loginimpl', views.loginimpl, name='loginimpl'),
+    path('androidlogin', views.androidlogin, name='androidlogin'),
 ]
