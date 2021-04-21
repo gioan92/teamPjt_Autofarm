@@ -1,12 +1,13 @@
 package com.example.autofarm.mainfragment.control
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.autofarm.R
+import com.example.autofarm.mainfragment.FarmCondition
 import com.example.autofarm.mqtt.MyMqtt
 import kotlinx.android.synthetic.main.ceilcontrol.*
-import kotlinx.android.synthetic.main.lightcontrol.*
 import java.lang.Exception
 
 class CeilActivity : AppCompatActivity(), View.OnClickListener {
@@ -25,9 +26,15 @@ class CeilActivity : AppCompatActivity(), View.OnClickListener {
         ceil_close.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
+
+
+
+
+
         var data:String = ""
         if(v?.id==R.id.ceil_open){
             data="ceil_open"
+
         }else{
             data="ceil_close"
         }

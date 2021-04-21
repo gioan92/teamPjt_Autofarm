@@ -15,15 +15,7 @@ import kotlinx.android.synthetic.main.farmcctv.*
 class FarmCctv : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.farmcctv, container, false);
-
-
-
-
-
         return view;
-
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

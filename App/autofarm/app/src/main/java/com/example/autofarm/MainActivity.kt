@@ -22,12 +22,6 @@ import java.lang.Exception
 import java.util.*
 import kotlin.collections.ArrayList
 
-class Examples {
-    companion object {
-        var data:String? = ""
-    }
-
-}
 
 class MainActivity : AppCompatActivity() {
     //Fragment를 불러오기 위한 변수
@@ -114,30 +108,11 @@ class MainActivity : AppCompatActivity() {
         var hum2 = hum.toInt()
         var degree2 = degree.toInt()
 
-        Log.d("mymqtt", "int hum $hum  degree $degree")
+        Log.d("mymqtt", "int hum $hum2  degree $degree2")
     }
 
     fun senddata():String{
         return data
     }
-
-
-    fun setData(fragment: Fragment, title:String){
-        val bundle = Bundle()
-        bundle.putString(data, title)
-
-        fragment.arguments = bundle
-    }
-
-
-
-
-
-
-
-
-
-
-
 
 }

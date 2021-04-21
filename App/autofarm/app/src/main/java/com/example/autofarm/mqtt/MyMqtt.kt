@@ -1,12 +1,12 @@
 package com.example.autofarm.mqtt
 
 import android.content.Context
-import android.service.voice.AlwaysOnHotwordDetector
 import android.util.Log
+import com.example.autofarm.mainfragment.FarmCondition
 import org.eclipse.paho.android.service.MqttAndroidClient
 import org.eclipse.paho.client.mqttv3.*
 
-class MyMqtt(val context: Context, val uri:String) {
+class MyMqtt(var context: Context, val uri:String) {
     var mqttClient:MqttAndroidClient = MqttAndroidClient(context,uri, MqttClient.generateClientId())
 
     // 등록한 토픽에 맞는 메세지가 도착하면 사용자정의 메소드를 실행할 수 있도록 callback 구현 --- 3번

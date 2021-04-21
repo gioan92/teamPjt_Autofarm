@@ -1,101 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#E3EFD5">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/weathertext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="날씨 정보"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-
-            <ImageView
-                android:id="@+id/weatherimage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
-
-
-
-        </LinearLayout>
-
-
-
-
-        <LinearLayout
+            android:id="@+id/firstlayer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:layout_weight="1"
-                >
+                android:orientation="vertical">
 
-                <Button
+                <TextView
                     android:id="@+id/degreetext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border"
+                    android:gravity="center"
                     android:text="온도"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                 <TextView
-                    android:id="@+id/degree"
+                    android:id="@+id/degreeoutput"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="온도"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:layout_weight="1"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                >
-
-                <TextView
-                    android:id="@+id/humiditytext"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="습도"
+                    android:text="온도 미연결"
+                    android:layout_weight="1"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-                <TextView
-                    android:id="@+id/humidity"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="습도"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    />
-
-
             </LinearLayout>
 
             <LinearLayout
@@ -105,33 +50,97 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/co2text"
+                    android:id="@+id/humiditytext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="이산화탄소"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:text="습도"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                 <TextView
-                    android:id="@+id/co2"
+                    android:id="@+id/humidityoutput"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="CO2 농도"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:text="습도 미연결"
                     android:layout_weight="1"
-
-                    />
-
-
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
             </LinearLayout>
-
-
-
-
         </LinearLayout>
 
+
+    <LinearLayout
+        android:id="@+id/secondlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lighttext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="채광량"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+            <TextView
+                android:id="@+id/lightoutput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="채광량 미연결"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ceiltext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:text="천장 상태"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <ImageView
+                android:id="@+id/ceilimage"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:layout_weight="1"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/ceil"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2.5"
+                android:gravity="center"
+                android:text="천장 미연결"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+        </LinearLayout>
     </LinearLayout>
-
-
 </LinearLayout>
+
