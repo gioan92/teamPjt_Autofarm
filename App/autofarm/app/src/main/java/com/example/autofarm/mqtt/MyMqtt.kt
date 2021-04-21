@@ -43,10 +43,10 @@ class MyMqtt(var context: Context, val uri:String) {
         })
     }
 
-    //토픽 subscribe등록 - 토픽을 서버에 등록하기 위한 메소드 --- 1
-    // qos - 0 : 보내고 끝, 1 : 보내고 한번정도 확인, 2 : handshaking
-    private fun subscribeTopic(topic:String, qos: Int = 0){
-        mqttClient.subscribe(topic, qos,null, object : IMqttActionListener {
+    // 토픽 subscribe 등록 - 토픽을 서버에 등록하기 위한 메소드  --- 1번
+    private fun subscribeTopic(topic: String, qos:Int = 0)
+    {
+        mqttClient.subscribe(topic, qos, null, object : IMqttActionListener{
             override fun onSuccess(asyncActionToken: IMqttToken?) {
                 Log.d("mymqtt", "subscribe 성공")
             }
@@ -74,4 +74,17 @@ class MyMqtt(var context: Context, val uri:String) {
             }
         })
     }
-}
+
+
+
+//        mqttClient.publish(topic,message,null,object:IMqttActionListener{
+//            override fun onSuccess(asyncActionToken: IMqttToken?) {
+//                Log.d("mymqtt","publish성공");
+//            }
+//
+//            override fun onFailure(asyncActionToken: IMqttToken?, exception: Throwable?) {
+//                Log.d("mymqtt","publish실패")
+//            }
+//        })
+    }
+

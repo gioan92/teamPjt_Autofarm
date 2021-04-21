@@ -3,11 +3,13 @@ from led import Led
 from servo import Servo
 from water import Water
 from pir import Pir
+from heat import Heat
 
 light = None
 ceil = None
 water = None
 pir = None
+heat = None
 
 
 
@@ -44,6 +46,8 @@ ceil = Servo()
 water = Water()
 pir = Pir(mqttClient, "")
 pir.start()
+heat = Heat()
+heat.heaton()
 # 브로커에 연결이 되면 내가 정의해 놓은 on_connect라는 함수가 실행되도록 등록
 mqttClient.on_connect = on_connect  # 연결되면 on_connect를 실행
 # 브로커에서 메세지가 전달되면 내가 등록해 놓은 on_message함수가 실행

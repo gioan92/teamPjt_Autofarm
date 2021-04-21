@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity() {
             override fun getItemCount(): Int {
                 return fragmentlist.size;
             }
-
             override fun createFragment(position: Int): Fragment {
                 return fragmentlist[position];
             }

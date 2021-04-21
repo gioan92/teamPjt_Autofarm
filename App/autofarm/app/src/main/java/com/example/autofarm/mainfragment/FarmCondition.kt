@@ -31,7 +31,7 @@ class FarmCondition : Fragment() {
         return view;
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundlgggie?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         mqttClient1= MyMqtt(context!!, "tcp://192.168.0.187:1883")
@@ -48,7 +48,7 @@ class FarmCondition : Fragment() {
 
     fun onReceived(topic:String, message: MqttMessage){
         val msg = String(message.payload)
-        val splitDHT = msg.split(",")
+
         data = msg
         var datalist = data.split(",")
         var hum1 = datalist[0]
@@ -58,7 +58,6 @@ class FarmCondition : Fragment() {
 
 
 
-        Log.d("mymqtt", "int hum $hum  degree $degree")
 
         degreeoutput.text = degree.toString() + "°C"
         humidityoutput.text = hum.toString() + "%"
