@@ -12,7 +12,6 @@ import com.example.autofarm.MainActivity
 import com.example.autofarm.R
 import com.example.autofarm.mainfragment.control.*
 import com.example.autofarm.mqtt.MyMqtt
-import kotlinx.android.synthetic.main.farmcontrol.*
 import kotlinx.android.synthetic.main.farmstate.*
 import kotlinx.android.synthetic.main.farmstate.ceilingcontrolbutton
 import kotlinx.android.synthetic.main.farmstate.degreecontrolbutton
