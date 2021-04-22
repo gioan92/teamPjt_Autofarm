@@ -1,6 +1,7 @@
 package com.example.autofarm.mainfragment
 
 
+import android.content.Intent
 import android.os.*
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,8 +10,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.autofarm.MainActivity
 import com.example.autofarm.R
+import com.example.autofarm.mainfragment.control.*
 import com.example.autofarm.mqtt.MyMqtt
+import kotlinx.android.synthetic.main.farmcontrol.*
 import kotlinx.android.synthetic.main.farmstate.*
+import kotlinx.android.synthetic.main.farmstate.ceilingcontrolbutton
+import kotlinx.android.synthetic.main.farmstate.degreecontrolbutton
+import kotlinx.android.synthetic.main.farmstate.lightcontrolbutton
+import kotlinx.android.synthetic.main.farmstate.waterbutton
 import org.eclipse.paho.client.mqttv3.MqttMessage
 import java.lang.Exception
 import kotlin.concurrent.thread
@@ -27,6 +34,27 @@ class FarmCondition : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        degreecontrolbutton.setOnClickListener {
+            val degreeIntent = Intent(activity, DegreeActivity::class.java).apply {
+            };
+            startActivity(degreeIntent);
+        }
+        waterbutton.setOnClickListener {
+            val waterIntent = Intent(activity, WaterActivity::class.java).apply {
+            };
+            startActivity(waterIntent);
+        }
+        lightcontrolbutton.setOnClickListener {
+            val lightIntent = Intent(activity, LightActivity::class.java).apply {
+            };
+            startActivity(lightIntent);
+        }
+        ceilingcontrolbutton.setOnClickListener {
+            val ceilIntent = Intent(activity, CeilActivity::class.java).apply {
+            };
+            startActivity(ceilIntent);
+        }
 
         mqttClient1= MyMqtt(context!!, "tcp://192.168.0.187:1883")
         try{

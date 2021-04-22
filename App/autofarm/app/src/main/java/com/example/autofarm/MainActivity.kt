@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.autofarm.mainfragment.*
 import com.example.autofarm.mainfragment.control.DegreeActivity
+import com.example.autofarm.mainfragment.control.MapActivity
 import com.example.autofarm.mqtt.MyMqtt
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     //Fragment를 불러오기 위한 변수
     var frag_condition = FarmCondition();
     var frag_cctv = FarmCctv();
-    var frag_control = FarmControl();
+    var frag_map = MapActivity();
     var fragmentlist = ArrayList<Fragment>();
 
 
@@ -44,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         fragmentlist.add(frag_condition);
         fragmentlist.add(frag_cctv);
-        fragmentlist.add(frag_control);
+        fragmentlist.add(frag_map);
 
         val adapter = object : FragmentStateAdapter(this) {
             override fun getItemCount(): Int {
@@ -62,7 +63,7 @@ class MainActivity : AppCompatActivity() {
             when (position) {
                 0 -> tab.text = "농장현황";
                 1 -> tab.text = "농장모습";
-                2 -> tab.text = "농장제어";
+                2 -> tab.text = "농장지도";
             }
         }.attach();
     }

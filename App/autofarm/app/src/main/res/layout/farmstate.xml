@@ -22,8 +22,8 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/degreetext"
+                <Button
+                    android:id="@+id/degreecontrolbutton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -50,14 +50,13 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/humiditytext"
+                <Button
+                    android:id="@+id/waterbutton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/border"
                     android:gravity="center"
-
                     android:text="습도"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -90,8 +89,8 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/lighttext"
+                <Button
+                    android:id="@+id/lightcontrolbutton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -119,8 +118,8 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/ceiltext"
+                <Button
+                    android:id="@+id/ceilingcontrolbutton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -142,11 +141,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:layout_weight="6"
+                    android:layout_weight="3"
                     android:gravity="center"
                     android:text="천장 미연결"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+</LinearLayout>
 
