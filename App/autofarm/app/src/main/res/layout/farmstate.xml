@@ -7,6 +7,39 @@
     android:orientation="vertical"
     android:background="#E3EFD5">
 
+<<<<<<< Updated upstream
+=======
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/weathertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="날씨 정보"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+            <ImageView
+                android:id="@+id/weatherimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+
+
+        </LinearLayout>
+
+
+
+>>>>>>> Stashed changes
 
         <LinearLayout
             android:id="@+id/firstlayer"
@@ -22,17 +55,21 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <TextView
+                <Button
                     android:id="@+id/degreetext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< Updated upstream
                     android:layout_gravity="center"
                     android:background="@drawable/border"
                     android:gravity="center"
+=======
+>>>>>>> Stashed changes
                     android:text="온도"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                 <TextView
+<<<<<<< Updated upstream
                     android:id="@+id/degreeoutput"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -41,6 +78,19 @@
                     android:text="온도 미연결"
                     android:layout_weight="1"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+=======
+                    android:id="@+id/degree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="온도"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    />
+
+
+>>>>>>> Stashed changes
             </LinearLayout>
 
             <LinearLayout
@@ -53,13 +103,17 @@
                     android:id="@+id/humiditytext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< Updated upstream
                     android:layout_gravity="center"
                     android:background="@drawable/border"
                     android:gravity="center"
+=======
+>>>>>>> Stashed changes
                     android:text="습도"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
                 <TextView
+<<<<<<< Updated upstream
                     android:id="@+id/humidityoutput"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -68,10 +122,24 @@
                     android:text="습도 미연결"
                     android:layout_weight="1"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+=======
+                    android:id="@+id/humidity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="습도"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    />
+
+
+>>>>>>> Stashed changes
             </LinearLayout>
         </LinearLayout>
 
 
+<<<<<<< Updated upstream
     <LinearLayout
         android:id="@+id/secondlayer"
         android:layout_width="match_parent"
@@ -94,6 +162,26 @@
                 android:gravity="center"
                 android:text="채광량"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+=======
+                <TextView
+                    android:id="@+id/co2text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="이산화탄소"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <TextView
+                    android:id="@+id/co2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CO2 농도"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"
+
+                    />
+>>>>>>> Stashed changes
 
 
             <TextView

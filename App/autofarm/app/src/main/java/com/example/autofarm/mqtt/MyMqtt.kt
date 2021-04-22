@@ -28,6 +28,11 @@ class MyMqtt(var context: Context, val uri:String) {
         })
     }
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
     fun connect(topics : Array<String>?=null){
         val mqttconnect_options = MqttConnectOptions()
         //connect 호출 - broker에 연결
@@ -52,8 +57,14 @@ class MyMqtt(var context: Context, val uri:String) {
             }
 
             override fun onFailure(asyncActionToken: IMqttToken?, exception: Throwable?) {
+<<<<<<< Updated upstream
                 Log.d("mymqtt", "subscribe 실패")
             }
+=======
+                Log.d("mymqtt", "subscribe 성공")
+            }
+
+>>>>>>> Stashed changes
         })
     }
 
@@ -65,6 +76,7 @@ class MyMqtt(var context: Context, val uri:String) {
         val message = MqttMessage()
         message.payload = payload.toByteArray() //String을 byte 배열로 변환 - 네트워크로 전송
         message.qos = qos
+<<<<<<< Updated upstream
         mqttClient.publish(topic,message,null,object:IMqttActionListener{
             override fun onSuccess(asyncActionToken: IMqttToken?) {
                 Log.d("mymqtt","publish성공");
@@ -73,8 +85,7 @@ class MyMqtt(var context: Context, val uri:String) {
                 Log.d("mymqtt","publish실패")
             }
         })
-    }
-
+=======
 
 
 //        mqttClient.publish(topic,message,null,object:IMqttActionListener{
@@ -86,5 +97,30 @@ class MyMqtt(var context: Context, val uri:String) {
 //                Log.d("mymqtt","publish실패")
 //            }
 //        })
+>>>>>>> Stashed changes
     }
 
+
+
+<<<<<<< Updated upstream
+//        mqttClient.publish(topic,message,null,object:IMqttActionListener{
+//            override fun onSuccess(asyncActionToken: IMqttToken?) {
+//                Log.d("mymqtt","publish성공");
+//            }
+//
+//            override fun onFailure(asyncActionToken: IMqttToken?, exception: Throwable?) {
+//                Log.d("mymqtt","publish실패")
+//            }
+//        })
+    }
+
+=======
+
+
+
+
+
+
+
+}
+>>>>>>> Stashed changes

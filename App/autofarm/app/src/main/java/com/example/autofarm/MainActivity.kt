@@ -22,6 +22,19 @@ import java.lang.Exception
 import java.util.*
 import kotlin.collections.ArrayList
 
+<<<<<<< Updated upstream
+=======
+
+class Examples {
+    companion object {
+        var data:String? = ""
+    }
+
+}
+
+
+
+>>>>>>> Stashed changes
 
 class MainActivity : AppCompatActivity() {
     //Fragment를 불러오기 위한 변수
@@ -30,9 +43,20 @@ class MainActivity : AppCompatActivity() {
     var frag_control = FarmControl();
     var fragmentlist = ArrayList<Fragment>();
 
+<<<<<<< Updated upstream
     lateinit var mqttClient:MyMqtt
     var data:String =  ""
 
+=======
+
+
+
+    lateinit var mqttClient:MyMqtt
+    var data:String =  ""
+
+
+
+>>>>>>> Stashed changes
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.farm_main)
@@ -107,11 +131,37 @@ class MainActivity : AppCompatActivity() {
         var hum2 = hum.toInt()
         var degree2 = degree.toInt()
 
+<<<<<<< Updated upstream
         Log.d("mymqtt", "int hum $hum2  degree $degree2")
+=======
+        Log.d("mymqtt", "int hum $hum  degree $degree")
+>>>>>>> Stashed changes
     }
 
     fun senddata():String{
         return data
     }
+<<<<<<< Updated upstream
+=======
+
+
+    fun setData(fragment: Fragment, title:String){
+        val bundle = Bundle()
+        bundle.putString(data, title)
+
+        fragment.arguments = bundle
+    }
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
 
 }
