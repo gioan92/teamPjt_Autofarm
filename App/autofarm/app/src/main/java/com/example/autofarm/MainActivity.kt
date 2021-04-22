@@ -22,19 +22,9 @@ import java.lang.Exception
 import java.util.*
 import kotlin.collections.ArrayList
 
-<<<<<<< Updated upstream
-=======
-
-class Examples {
-    companion object {
-        var data:String? = ""
-    }
-
-}
 
 
 
->>>>>>> Stashed changes
 
 class MainActivity : AppCompatActivity() {
     //Fragment를 불러오기 위한 변수
@@ -43,37 +33,11 @@ class MainActivity : AppCompatActivity() {
     var frag_control = FarmControl();
     var fragmentlist = ArrayList<Fragment>();
 
-<<<<<<< Updated upstream
-    lateinit var mqttClient:MyMqtt
-    var data:String =  ""
 
-=======
-
-
-
-    lateinit var mqttClient:MyMqtt
-    var data:String =  ""
-
-
-
->>>>>>> Stashed changes
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.farm_main)
 
-        // subscribe 각자 브로커 ip주소를 사용하기.
-        mqttClient= MyMqtt(this, "tcp://192.168.0.187:1883")
-
-        try{
-            mqttClient.setCallback(::onReceived) // callback일 때 메소드명만 입력
-            mqttClient.connect(arrayOf<String>("iot/#"))
-        }catch(e: Exception){
-            e.printStackTrace()
-        }
-
-
-
-        //툴바, 탭 text색상 변경
         setActionBar(toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
         tabs.setTabTextColors(Color.BLACK, Color.BLUE);
@@ -102,66 +66,5 @@ class MainActivity : AppCompatActivity() {
             }
         }.attach();
     }
-
-    fun onReceived(topic:String, message: MqttMessage){
-        val msg = String(message.payload)
-        val splitDHT = msg.split(",")
-
-
-
-        //Log.d("mymqtt", msg)
-        data = msg
-        //Log.d("mymqtt", "com$data")
-
-        val datasample = senddata()
-        //Log.d("mymqtt", "new$datasample")
-
-        var datalist = datasample.split(",")
-
-        var hum1 = datalist[0]
-        var degree1 = datalist[1]
-
-        //Log.d("mymqtt", "string hum $hum1   degree  $degree1")
-
-        var hum = hum1.toFloat()
-        var degree = degree1.toFloat()
-
-        //Log.d("mymqtt", "float hum $hum")
-
-        var hum2 = hum.toInt()
-        var degree2 = degree.toInt()
-
-<<<<<<< Updated upstream
-        Log.d("mymqtt", "int hum $hum2  degree $degree2")
-=======
-        Log.d("mymqtt", "int hum $hum  degree $degree")
->>>>>>> Stashed changes
-    }
-
-    fun senddata():String{
-        return data
-    }
-<<<<<<< Updated upstream
-=======
-
-
-    fun setData(fragment: Fragment, title:String){
-        val bundle = Bundle()
-        bundle.putString(data, title)
-
-        fragment.arguments = bundle
-    }
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> Stashed changes
 
 }
