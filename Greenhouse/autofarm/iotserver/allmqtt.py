@@ -4,6 +4,14 @@ import DHTsensor
 import ArduinoSensorUART
 import time
 
+sensors = [
+    # Sensor(5, (3, 10), 'iot/user1/temp'),
+    # Sensor(7, (20, 60), 'iot/user1/humi'),
+    # Sensor(10, (20, 80), 'iot/user1/illu'),
+    # Sensor(12, (0, 1), 'iot/user1/dust'),
+]
+led = 21
+
 
 class MyMqtt_Sub():
     def __init__(self):
@@ -26,9 +34,15 @@ class MyMqtt_Sub():
 
     def on_message(self, client, userdata, msg):
         GPIO.setmode(GPIO.BCM)
+        GPIO.setup(led, GPIO.OUT, initial=GPIO.LOW)
         myval = msg.payload.decode("utf-8")
         print(myval)
         print(msg.topic + "----" + str(myval))
+        if myval == "led_on":
+            print("test")
+            GPIO.output(led, GPIO.HIGH)
+        else:
+            GPIO.output(led, GPIO.LOW)
             # GPIO.cleanup()
 
 
