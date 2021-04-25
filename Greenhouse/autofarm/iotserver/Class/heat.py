@@ -10,7 +10,6 @@ class Heat():
    def heaton(self):
        try:
            GPIO.output(self.pin, GPIO.HIGH)
-           print("따뜻")
            time.sleep(60)
        except KeyboardInterrupt:
            GPIO.cleanup()

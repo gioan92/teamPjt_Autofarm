@@ -5,13 +5,16 @@ from water import Water
 from pir import Pir
 from heat import Heat
 
+import RPi.GPIO as GPIO
+import DHTsensor
+import ArduinoSensorUART
+import time
+
 light = None
 ceil = None
 water = None
 pir = None
 heat = None
-
-
 
 
 def on_connect(client,usedata,flags,rc):
@@ -24,6 +27,7 @@ def on_connect(client,usedata,flags,rc):
 
 # 메세지가 도착했을 때 처리할 일들 - 여러가지 장비 제어, Mongodb에 저장
 def on_message(client,userdata,msg):
+    GPIO.setmode(GPIO.BCM)
     global light, ceil, water, pir
     myval = msg.payload.decode("utf-8")
     print("메세지도착 " + str(myval))
@@ -40,7 +44,12 @@ def on_message(client,userdata,msg):
         water.watering()
 
 
+
 mqttClient = mqtt.Client()
+mqttClient.on_connect = on_connect
+mqttClient.on_message = on_message
+mqttClient.connect("192.168.200.115", 1883, 60)
+
 light = Led()
 ceil = Servo()
 water = Water()
@@ -48,13 +57,11 @@ pir = Pir(mqttClient, "")
 pir.start()
 heat = Heat()
 heat.heaton()
-# 브로커에 연결이 되면 내가 정의해 놓은 on_connect라는 함수가 실행되도록 등록
-mqttClient.on_connect = on_connect  # 연결되면 on_connect를 실행
-# 브로커에서 메세지가 전달되면 내가 등록해 놓은 on_message함수가 실행
-mqttClient.on_message = on_message  # 메세지가 오면 on_message 실행
-# 브로커에 연결하기
-mqttClient.connect("192.168.0.197", 1883, 60)
-# 토픽이 전달될 때 까지 수신대기기
+dht = DHTsensor.DHT(mqttClient, "")
+dht.start()
+ard = ArduinoSensorUART.Arduino(mqttClient, "")
+ard.start()
+
 mqttClient.loop_forever()
 
 
