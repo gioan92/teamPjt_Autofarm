@@ -39,7 +39,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="온도"
+                    android:text="온도 미연결"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
@@ -131,7 +131,7 @@
                 <ImageView
                     android:id="@+id/ceilimage"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="350dp"
                     android:layout_weight="1"
                     android:scaleType="fitXY"
                     tools:srcCompat="@drawable/closeroof" />

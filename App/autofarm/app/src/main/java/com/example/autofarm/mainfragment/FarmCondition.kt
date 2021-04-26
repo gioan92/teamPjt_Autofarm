@@ -2,6 +2,7 @@ package com.example.autofarm.mainfragment
 
 import android.content.Intent
 import android.os.*
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,21 +23,23 @@ class FarmCondition : Fragment() {
     lateinit var mqttClient1: MyMqtt
     lateinit var handler1: Handler
     var data:String =  ""
+    var hum:Double = 0.0
+    var degree:Double = 0.0
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.farmstate, container, false);
 
-        handler1 = object : Handler(Looper.myLooper()!!){
-            override fun handleMessage(msg: Message) {
-                super.handleMessage(msg)
-                var datalist = data.split(",")
-                var hum1 = datalist[0]
-                var degree1 = datalist[1]
-                var hum = hum1.toDouble()
-                var degree = degree1.toDouble()
-                degreeoutput.text = degree.toString() + "°C"
-                humidityoutput.text = hum.toString() + "%"
-            }
-        }
+//        handler1 = object : Handler(Looper.myLooper()!!){
+//            override fun handleMessage(msg: Message) {
+//                super.handleMessage(msg)
+//                var datalist = data.split(",")
+//                var hum1 = datalist[0]
+//                var degree1 = datalist[1]
+//                var hum = hum1.toDouble()
+//                var degree = degree1.toDouble()
+//                degreeoutput.text = degree.toString() + "°C"
+//                humidityoutput.text = hum.toString() + "%"
+//            }
+//        }
 
         return view;
     }
@@ -64,8 +67,13 @@ class FarmCondition : Fragment() {
             };
             startActivity(ceilIntent);
         }
+
         thread{
+<<<<<<< Updated upstream
             mqttClient1 = MyMqtt(context!!, "tcp://192.168.200.115:1883")
+=======
+            mqttClient1 = MyMqtt(context!!, "tcp://192.168.200.167:1883")
+>>>>>>> Stashed changes
             try {
                 mqttClient1.setCallback(::onReceived) // callback일 때 메소드명만 입력
                 mqttClient1.connect(arrayOf<String>("iot/#"))
@@ -79,7 +87,35 @@ class FarmCondition : Fragment() {
     fun onReceived(topic:String, message: MqttMessage) {
         val msg = String(message.payload)
         data = msg
-        handler1.sendMessage(handler1.obtainMessage())
+        Log.d("mydata", data)
+        // handler1.sendMessage(handler1.obtainMessage())
+
+        if(data[0] == '1')
+        {
+            var dhtdata = data.substring(2)
+            Log.d("mydata", dhtdata)
+
+            var datalist = dhtdata.split(",")
+            var hum1 = datalist[0]
+            var degree1 = datalist[1]
+            hum = hum1.toDouble()
+            degree = degree1.toDouble()
+
+            degreeoutput.text = degree.toString() + "°C"
+            humidityoutput.text = hum.toString() + "%"
+        }
+        else if(data[0] == '2')
+        {
+            var arddata = data.substring(2)
+
+            Log.d("mydata", arddata)
+
+            lightoutput.text = arddata.toString()
+        }
+
+
+
+
     }
 
 

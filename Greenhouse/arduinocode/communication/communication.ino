@@ -9,7 +9,7 @@ void setup() {
   RPI.begin(9600);
   
   // 불꽃감지센서 핀모드 
-   pinMode(flame, INPUT);
+  pinMode(flame, INPUT);
   pinMode(LED, OUTPUT);
 }
 
@@ -34,17 +34,14 @@ String iStr(cds);
   // 센서들의 값 보내기
   // 조도센서 + 불꽃감지센서 
   RPI.print(iStr);
-//  RPI.print(",");
-//  RPI.print(fire);
-//  RPI.print(";");
+  RPI.print(",");
+  RPI.print(fire);
+  RPI.print(";");
 
   // 시리얼 모니터로 확인 
   Serial.print(iStr);
   Serial.print(",");
-  Serial.print("fire:");
   Serial.print(fire);
   Serial.println(";");
   delay(1000);
-  
-  
 }
