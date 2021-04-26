@@ -49,6 +49,7 @@ class CarActivity : AppCompatActivity(), View.OnClickListener {
 
         farmcall.setOnClickListener {
             publish("p");
+            setResult(1);
         }
 
         warehousecall.setOnClickListener {

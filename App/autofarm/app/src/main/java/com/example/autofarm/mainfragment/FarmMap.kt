@@ -2,6 +2,7 @@ package com.example.autofarm.mainfragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,17 +38,48 @@ class FarmMap : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        visibleTestBtn.setOnClickListener {
-            tractor1_warehouse.visibility = View.VISIBLE;
-        }
+
         tractor1_warehouse.setOnClickListener {
-            visibleTestBtn.setText("tractor1 클릭함");
             activity?.let {
                 val intent = Intent(context, CarActivity::class.java).apply {
                     putExtra("tractor", 1);
                 }
-                startActivity(intent)
+                startActivityForResult(intent, 100);
             }
+        }
+        tractor1_wtof.setOnClickListener {
+            activity?.let {
+                val intent = Intent(context, CarActivity::class.java).apply {
+                    putExtra("tractor", 1);
+                }
+                startActivityForResult(intent, 101)
+            }
+        }
+        tractor1_farm.setOnClickListener {
+            activity?.let {
+                val intent = Intent(context, CarActivity::class.java).apply {
+                    putExtra("tractor", 1);
+                }
+                startActivityForResult(intent, 102)
+            }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 100) { // warehouse
+            //Log.d("farmmap", "돌아옴${resultCode}");
+            tractor1_warehouse.visibility = View.INVISIBLE;
+            tractor1_wtof.visibility = View.VISIBLE;
+        }
+        else if (requestCode == 101) { // w to f
+
+        }
+        else if (requestCode == 102) { // farm
+
+        }
+        else if (requestCode == 103) { // f to w
+
         }
     }
 }

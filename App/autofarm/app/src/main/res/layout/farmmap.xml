@@ -29,12 +29,6 @@
         android:src="@drawable/warehouse"
         android:layout_gravity="center" />
 
-    <Button
-        android:id="@+id/visibleTestBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="visible test" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,14 +49,15 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:src="@drawable/tractor1"
-                android:visibility="invisible" />
+                />
 
             <ImageView
                 android:id="@+id/tractor2_warehouse"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:src="@drawable/tractor2" />
+                android:src="@drawable/tractor2"
+                android:visibility="invisible"/>
         </LinearLayout>
 
 
@@ -85,12 +80,14 @@
                     android:id="@+id/tractor1_wtof"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/tractor1" />
+                    android:src="@drawable/tractor1"
+                    android:visibility="invisible"/>
                 <ImageView
                     android:id="@+id/tractor2_wtof"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/tractor2" />
+                    android:src="@drawable/tractor2"
+                    android:visibility="invisible"/>
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -100,12 +97,14 @@
                     android:id="@+id/tractor1_ftow"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/tractor1" />
+                    android:src="@drawable/tractor1"
+                    android:visibility="invisible"/>
                 <ImageView
                     android:id="@+id/tractor2_ftow"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/tractor2" />
+                    android:src="@drawable/tractor2"
+                    android:visibility="invisible"/>
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -124,13 +123,15 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:src="@drawable/tractor1" />
+                android:src="@drawable/tractor1"
+                android:visibility="invisible"/>
             <ImageView
                 android:id="@+id/tractor2_farm"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:src="@drawable/tractor2" />
+                android:src="@drawable/tractor2"
+                android:visibility="invisible"/>
         </LinearLayout>
     </LinearLayout>
 

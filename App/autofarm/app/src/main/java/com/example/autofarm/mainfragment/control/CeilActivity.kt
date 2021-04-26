@@ -15,7 +15,7 @@ class CeilActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ceilcontrol);
-        mqttClient = MyMqtt(this,"tcp://192.168.0.197:1883")
+        mqttClient = MyMqtt(this,"tcp://192.168.200.111:1883")
         try{
             mqttClient.connect(arrayOf<String>("iot/#"))
         }

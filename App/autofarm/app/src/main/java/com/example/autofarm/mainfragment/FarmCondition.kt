@@ -71,7 +71,7 @@ class FarmCondition : Fragment() {
         thread{
 
 
-            mqttClient1 = MyMqtt(context!!, "tcp://192.168.200.167:1883")
+            mqttClient1 = MyMqtt(context!!, "tcp://192.168.200.115:1883")
 
             try {
                 mqttClient1.setCallback(::onReceived) // callback일 때 메소드명만 입력

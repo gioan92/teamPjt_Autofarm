@@ -6,6 +6,7 @@ import android.view.View
 import com.example.autofarm.R
 import com.example.autofarm.mqtt.MyMqtt
 import kotlinx.android.synthetic.main.watercontrol.*
+import kotlin.concurrent.thread
 
 class WaterActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var mqttClient: MyMqtt;
@@ -13,12 +14,14 @@ class WaterActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.watercontrol);
 
-        mqttClient = MyMqtt(this, "tcp://192.168.0.197:1883");
+        thread {
+            mqttClient = MyMqtt(this, "tcp://192.168.200.115:1883");
 
-        try {
-            mqttClient.connect(arrayOf<String>("mydata/greenhouse"));
-        } catch(e: Exception) {
-            e.printStackTrace();
+            try {
+                mqttClient.connect(arrayOf<String>("mydata/greenhouse"));
+            } catch(e: Exception) {
+                e.printStackTrace();
+            }
         }
 
         water.setOnClickListener(this);
