@@ -18,8 +18,6 @@
         <activity android:name=".mainfragment.control.CeilActivity" />
         <activity android:name=".mainfragment.control.LightActivity" />
         <activity android:name=".mainfragment.control.WaterActivity" />
-        <activity android:name=".m"
-        <activity android:name="."
         <activity android:name=".mainfragment.control.DegreeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -1,20 +1,16 @@
-package com.example.autofarm.mainfragment.control
+package com.example.autofarm.mainfragment
 
-import android.animation.ObjectAnimator
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.autofarm.R
+import com.example.autofarm.mainfragment.control.CarActivity
 import kotlinx.android.synthetic.main.farmmap.*
 
-class MapActivity : Fragment() {
+class FarmMap : Fragment() {
 //    override fun onCreate(savedInstanceState: Bundle?) {
 //        super.onCreate(savedInstanceState)
 //        setContentView(R.layout.farmmap);
@@ -47,7 +43,9 @@ class MapActivity : Fragment() {
         tractor1_warehouse.setOnClickListener {
             visibleTestBtn.setText("tractor1 클릭함");
             activity?.let {
-                val intent = Intent(context, CarActivity::class.java)
+                val intent = Intent(context, CarActivity::class.java).apply {
+                    putExtra("tractor", 1);
+                }
                 startActivity(intent)
             }
         }
