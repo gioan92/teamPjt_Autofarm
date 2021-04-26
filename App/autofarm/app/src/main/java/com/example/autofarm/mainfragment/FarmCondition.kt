@@ -69,11 +69,10 @@ class FarmCondition : Fragment() {
         }
 
         thread{
-<<<<<<< Updated upstream
-            mqttClient1 = MyMqtt(context!!, "tcp://192.168.200.115:1883")
-=======
+
+
             mqttClient1 = MyMqtt(context!!, "tcp://192.168.200.167:1883")
->>>>>>> Stashed changes
+
             try {
                 mqttClient1.setCallback(::onReceived) // callback일 때 메소드명만 입력
                 mqttClient1.connect(arrayOf<String>("iot/#"))
@@ -113,10 +112,5 @@ class FarmCondition : Fragment() {
             lightoutput.text = arddata.toString()
         }
 
-
-
-
     }
-
-
 }
