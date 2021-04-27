@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+ <h1>AutoFarm CCTV</h1>
+    <h3>
+        <!-- flask에서 넘겨주는 데이터를 사용 - jinja2 라는 프레임워크를 이용  -->
+    {% if message %}
+        {{message}}
+    {% endif %}
+
+
+
+
+        <div>
+            <img src = "{{ url_for('showVideo') }}" width = "80%">
+        </div>
+
+
+
+    </h3>
+</body>
+</html>

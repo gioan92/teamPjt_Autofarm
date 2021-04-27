@@ -27,7 +27,7 @@ class FarmCctv : Fragment() {
         }
 
         // 자신의 아이피 주소를 입력해야 합니다.
-        farmcamera.loadUrl("http://192.168.0.188:5000/showVideo")
+        farmcamera.loadUrl("http://192.168.200.118:5000/showVideo")
 
 
 
