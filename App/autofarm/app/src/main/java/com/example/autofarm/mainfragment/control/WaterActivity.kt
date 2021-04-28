@@ -17,12 +17,15 @@ class WaterActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.watercontrol);
 
-        mqttClient = MyMqtt(this,"tcp://192.168.200.115:1883");
 
-        try {
-            mqttClient.connect(arrayOf<String>("iot/#"));
-        } catch(e: Exception) {
-            e.printStackTrace();
+        thread {
+            mqttClient = MyMqtt(this, "tcp://192.168.200.115:1883");
+
+            try {
+                mqttClient.connect(arrayOf<String>("mydata/greenhouse"));
+            } catch(e: Exception) {
+                e.printStackTrace();
+            }
         }
 
         water.setOnClickListener(this);

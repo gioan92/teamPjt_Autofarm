@@ -8,12 +8,12 @@
     android:background="#E3EFD5">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tractornum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:text="1호차" />
+        />
 
     <TextView
         android:id="@+id/textView3"
@@ -37,25 +37,43 @@
             >
 
             <Button
-                android:id="@+id/definition"
+                android:id="@+id/farmcall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="목적지 설정" />
+                android:visibility="visible"
+                android:text="농장 호출" />
 
             <Button
-                android:id="@+id/carstart"
+                android:id="@+id/warehousecall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="출발" />
+                android:visibility="visible"
+                android:text="창고 호출" />
 
-            <Button
-                android:id="@+id/carreturn"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="회수" />
+                android:layout_height="match_parent"
+                >
+                <Button
+                    android:id="@+id/autocontrol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:text="자동" />
+
+                <Button
+                    android:id="@+id/manualcontrol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:text="수동" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
@@ -68,12 +86,13 @@
             >
 
             <ImageButton
-                android:id="@+id/upbutton"
+                android:id="@+id/frontbutton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:srcCompat="@drawable/arrowup"
                 android:layout_gravity="center"
                 android:scaleType="fitXY"
+                android:visibility="invisible"
                 />
 
             <LinearLayout
@@ -90,14 +109,16 @@
                     android:layout_height="60dp"
                     app:srcCompat="@drawable/arrowleft"
                     android:scaleType="fitXY"
+                    android:visibility="invisible"
                     />
 
                 <ImageButton
-                    android:id="@+id/downstop"
+                    android:id="@+id/stopbutton"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     app:srcCompat="@drawable/arrowstop"
                     android:scaleType="fitXY"
+                    android:visibility="invisible"
                     />
 
 
@@ -107,16 +128,18 @@
                     android:layout_height="60dp"
                     app:srcCompat="@drawable/arrowright"
                     android:scaleType="fitXY"
+                    android:visibility="invisible"
                     />
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/downbutton"
+                android:id="@+id/backbutton"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 app:srcCompat="@drawable/arrowdown"
                 android:layout_gravity="center"
                 android:scaleType="fitXY"
+                android:visibility="invisible"
                 />
         </LinearLayout>
     </LinearLayout>
