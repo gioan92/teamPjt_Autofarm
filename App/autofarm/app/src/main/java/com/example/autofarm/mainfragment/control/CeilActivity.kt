@@ -8,14 +8,15 @@ import com.example.autofarm.R
 import com.example.autofarm.mainfragment.FarmCondition
 import com.example.autofarm.mqtt.MyMqtt
 import kotlinx.android.synthetic.main.ceilcontrol.*
+import kotlinx.android.synthetic.main.farmstate.*
 import java.lang.Exception
 
 class CeilActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var mqttClient: MyMqtt
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.ceilcontrol);
-        mqttClient = MyMqtt(this,"tcp://192.168.0.197:1883")
+        setContentView(R.layout.ceilcontrol)
+        mqttClient = MyMqtt(this,"tcp://192.168.200.115:1883")
         try{
             mqttClient.connect(arrayOf<String>("iot/#"))
         }
@@ -26,15 +27,9 @@ class CeilActivity : AppCompatActivity(), View.OnClickListener {
         ceil_close.setOnClickListener(this)
     }
     override fun onClick(v: View?) {
-
-
-
-
-
         var data:String = ""
         if(v?.id==R.id.ceil_open){
             data="ceil_open"
-
         }else{
             data="ceil_close"
         }

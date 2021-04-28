@@ -13,7 +13,7 @@ class LightActivity : AppCompatActivity(), View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.lightcontrol);
-        mqttClient = MyMqtt(this,"tcp://192.168.0.197:1883")
+        mqttClient = MyMqtt(this,"tcp://192.168.200.115:1883")
         try{
             mqttClient.connect(arrayOf<String>("iot/#"))
         }

@@ -13,6 +13,7 @@ class Servo():
     def ceilopen(self):
         # 이산화탄소 수치가 올라가면 ceilopen 메서드 실행
         try:
+            print("ceilopen")
             self.p.ChangeDutyCycle(9.5)
             time.sleep(0.5)
         except KeyboardInterrupt:
@@ -22,6 +23,7 @@ class Servo():
     def ceilclose(self):
         # 이산화탄소 수치가 내려가면 ceilopen 메서드 실행
         try:
+            print("ceilclose")
             self.p.ChangeDutyCycle(2.5)
             time.sleep(0.5)
         except KeyboardInterrupt:

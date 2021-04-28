@@ -4,6 +4,7 @@ from servo import Servo
 from water import Water
 from pir import Pir
 from heat import Heat
+from fan import Fan
 
 import RPi.GPIO as GPIO
 import DHTsensor
@@ -47,8 +48,11 @@ def on_message(client,userdata,msg):
     elif str(myval) == 'ceil_close':
         ceil.ceilclose()
     elif str(myval) == 'water_on':
-        print("Pub(Android)에서 water_on 버튼이 눌려졌습니다.")
         water.watering()
+    elif str(myval) == 'heat_on':
+        heat.heaton()
+    elif str(myval) == 'fan_on':
+        fan.fanon()
 
 
 
@@ -63,7 +67,8 @@ water = Water()
 pir = Pir(mqttClient, "")
 pir.start()
 heat = Heat()
-heat.heaton()
+fan = Fan()
+
 dht = DHTsensor.DHT(mqttClient, "")
 dht.start()
 ard = ArduinoSensorUART.Arduino(mqttClient, "")

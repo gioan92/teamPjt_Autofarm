@@ -1,22 +1,24 @@
 from RPi import GPIO
 import time
 
-class Led():
+class Fan():
    def __init__(self):
-       self.pin = 20;
+       self.pin = 27;
        GPIO.setmode(GPIO.BCM)
        GPIO.setup(self.pin, GPIO.OUT, initial=GPIO.LOW)
 
-   def lighton(self):
+   def fanon(self):
        try:
-           print("lighton")
+           print("fanon")
            GPIO.output(self.pin, GPIO.HIGH)
+           time.sleep(10)
        except KeyboardInterrupt:
            GPIO.cleanup()
-   def lightoff(self):
+   def fanoff(self):
        try:
-           print("lightoff")
+           print("fanof f")
            GPIO.output(self.pin, GPIO.LOW)
+           time.sleep(10)
        except KeyboardInterrupt:
            GPIO.cleanup()
 
