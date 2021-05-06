@@ -11,6 +11,10 @@ import DHTsensor
 import ArduinoSensorUART
 import time
 
+from flask import Flask, render_template, request, Response, jsonify
+
+from MyMessage import mymessage
+
 light = None
 ceil = None
 water = None
@@ -55,25 +59,37 @@ def on_message(client,userdata,msg):
         fan.fanon()
 
 
+app = Flask(__name__);
 
-mqttClient = mqtt.Client()
-mqttClient.on_connect = on_connect
-mqttClient.on_message = on_message
-mqttClient.connect("192.168.200.115", 1883, 60)
+@app.route("/upload")
+def upload():
+    global dht;
+    content = dht.message.content;
+    return jsonify(content);
 
-light = Led()
-ceil = Servo()
-water = Water()
-pir = Pir(mqttClient, "")
-pir.start()
-heat = Heat()
-fan = Fan()
+if __name__ == "__main__":
+    mqttClient = mqtt.Client()
+    mqttClient.on_connect = on_connect
+    mqttClient.on_message = on_message
+    mqttClient.connect("192.168.99.209", 1883, 60)
 
-dht = DHTsensor.DHT(mqttClient, "")
-dht.start()
-ard = ArduinoSensorUART.Arduino(mqttClient, "")
-ard.start()
+    msg = mymessage(0, 0);
+    dht = DHTsensor.DHT(mqttClient, "", msg)
+    dht.start()
 
-mqttClient.loop_forever()
+    light = Led()
+    ceil = Servo()
+    water = Water()
+    pir = Pir(mqttClient, "")
+    pir.start()
+    heat = Heat()
+    fan = Fan()
+
+    ard = ArduinoSensorUART.Arduino(mqttClient, "")
+    ard.start()
+
+    app.run(host="0.0.0.0", debug=True, threaded=True);
+
+    mqttClient.loop_forever()
 
 

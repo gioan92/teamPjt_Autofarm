@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="204d7223-d3d3-4be2-a0bf-7e60758f57be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../App/autofarm/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../App/autofarm/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autofarm/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/autofarm/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autofarm/templates/autofarm/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/autofarm/templates/autofarm/main.html" afterDir="false" />
-    </list>
+    <list default="true" id="204d7223-d3d3-4be2-a0bf-7e60758f57be" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +19,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/autofarm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Greenhouse/autofarm" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -50,5 +45,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
