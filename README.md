@@ -86,6 +86,16 @@ IoT A반 2조 프로젝트
 
 
 
+### DB
+
+* [ERD](https://www.erdcloud.com/d/KtWCgXFwZ3oTkMKzi)
+
+  
+
+---
+
+
+
 ### Demonstration
 
 * [발표자료](https://drive.google.com/file/d/1LFSFhSjJ8rWNc3AWC3bccMWxTgLJLNpN/view?usp=sharing)
