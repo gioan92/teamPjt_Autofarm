@@ -88,18 +88,11 @@ IoT A반 2조 프로젝트
 
 ### Demonstration
 
-* 발표자료
-
-   [프로젝트 결과보고서_2조.pptx](..\..\project_autofarm\프로젝트 결과보고서_2조.pptx) 
-
+* [발표자료](https://drive.google.com/file/d/1LFSFhSjJ8rWNc3AWC3bccMWxTgLJLNpN/view?usp=sharing)
 * 시연영상
+   * [물 수동 급여, 천장 수동 개폐, 움직임감지센서 활용한 조명 자동제어](https://drive.google.com/file/d/1arg525NELVBzRasm4UqFokWzEen_RkkM/view?usp=sharing)
+   * [열선, 쿨링팬 활용한 온도 제어](https://drive.google.com/file/d/1arg525NELVBzRasm4UqFokWzEen_RkkM/view?usp=sharing)
+   * [습도센서 활용한 물 자동 급여](https://drive.google.com/file/d/1arg525NELVBzRasm4UqFokWzEen_RkkM/view?usp=sharing)
+   * [불꽃감지센서 활용한 화재 발생 알림](https://drive.google.com/file/d/1arg525NELVBzRasm4UqFokWzEen_RkkM/view?usp=sharing)
+   * [트랙터 수동, 자동 제어](https://drive.google.com/file/d/1arg525NELVBzRasm4UqFokWzEen_RkkM/view?usp=sharing)
 
-<video src="C:\Users\USER\Desktop\project_autofarm\동영상모음\1펌프모터수동제어,천장모터수동제어,LED수동제어,움직임감지센서LED.mp4"style="width:40%; height:40%"></video>
-
-<video src="C:\Users\USER\Desktop\project_autofarm\동영상모음\2_33도기준쿨링팬,열선자동제어.mp4" style="width:40%; height:40%"></video>
-
-<video src="C:\Users\USER\Desktop\project_autofarm\동영상모음\3습도물펌프자동제어.mp4"style="width:40%; height:40%"></video>
-
-<video src="C:\Users\USER\Desktop\project_autofarm\동영상모음\4불꽃감지센서알림.mp4"style="width:30%; height:30%"></video>
-
-<video src="C:\Users\USER\Desktop\project_autofarm\동영상모음\5트랙터화면제어,라인트레이서.mp4"style="width:30%; height:30%"></video>
