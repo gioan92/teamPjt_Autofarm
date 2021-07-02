@@ -61,7 +61,7 @@ IoT A반 2조 프로젝트
   - Django 3.1.5
   - Android Studio 4.1.1
   - Mosquitto 1.6.9
-  - MariaDB 15.1
+  - MariaDB 10.3
   - MySql
   - NoSql (MongoDB)
 - Arduino Uno
@@ -70,14 +70,15 @@ IoT A반 2조 프로젝트
   - LM35 온도센서
   - CDS 조도센서
   - 펌프모터
+  - 토양 습도 프로브, A/D 컨버터 모듈
   - L293D 모터쉴드
     - Fan
     - 발열패드
 - RaspberryPi4
   - LED
   - DHT 온습도센서
-  - 움직임감지센서
-  - 서보모터
+  - PIR 센서
+  - SG90 서보모터
   - L-51ROPT1D2 불꽃감지센서
 
 
